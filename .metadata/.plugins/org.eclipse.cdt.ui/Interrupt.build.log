@@ -1,0 +1,12 @@
+23:22:06 **** Incremental Build of configuration Release for project Interrupt ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t Interrupt.elf
+   text	   data	    bss	    dec	    hex	filename
+    202	      0	      0	    202	     ca	Interrupt.elf
+    202	      0	      0	    202	     ca	(TOTALS)
+Finished building: sizedummy
+ 
+
+23:22:06 Build Finished (took 69ms)
+

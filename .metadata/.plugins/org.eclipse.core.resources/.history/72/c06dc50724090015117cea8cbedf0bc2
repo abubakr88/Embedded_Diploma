@@ -1,0 +1,19 @@
+int main(void)
+{
+	int i = 1;
+	switch(i)
+	{
+	printf ( "Hi") // It does not belongs to any case
+	case 1:
+	      printf("Case 1");
+	      break;
+	case 2:
+	      printf("Case 2");
+	      break;
+	case 3:
+	      printf("Case 3");
+	      break;
+	default :
+	      printf("Default Case ");
+	}
+}

@@ -1,0 +1,12 @@
+11:26:29 **** Incremental Build of configuration Release for project LCD_Driver ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t LCD_Driver.elf
+   text	   data	    bss	    dec	    hex	filename
+    662	     30	      0	    692	    2b4	LCD_Driver.elf
+    662	     30	      0	    692	    2b4	(TOTALS)
+Finished building: sizedummy
+ 
+
+11:26:29 Build Finished (took 81ms)
+

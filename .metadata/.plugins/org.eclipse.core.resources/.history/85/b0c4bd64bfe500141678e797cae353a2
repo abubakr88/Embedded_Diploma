@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : sort_array_algo.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int temp,i,j,n,x[5]={21,32,1,43,4};
+
+	for(i=1;i<n;i++)
+	{
+		temp = x[i];
+		j=i-1;
+		while(temp<x[j] && j>=0)
+		{
+			x[j+1] = x[j];
+			--j;
+		}
+		x[j+1]=temp;
+	}
+	printf("In ascending order: ");
+	for(i=0; i<n; i++)
+		printf("%d\t",x[i]);
+
+for (i=0;i<n;i++)
+{
+printf("a[%d]= %d \n", i, x[i]);
+}
+}

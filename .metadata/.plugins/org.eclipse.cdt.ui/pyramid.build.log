@@ -1,0 +1,6 @@
+00:50:55 **** Incremental Build of configuration Release for project pyramid ****
+make all 
+make: Nothing to be done for 'all'.
+
+00:50:55 Build Finished (took 77ms)
+

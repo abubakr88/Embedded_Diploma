@@ -1,0 +1,18 @@
+/*
+ ============================================================================
+ Name        : revision.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+
+int main(void)
+{
+char a = 'abubakr';
+printf("a=%c ", a);
+return 0;
+}

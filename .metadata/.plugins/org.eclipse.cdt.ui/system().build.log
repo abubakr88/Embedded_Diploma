@@ -1,0 +1,17 @@
+18:33:17 **** Build of configuration Debug for project system() ****
+make all 
+Building file: ../src/system().c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/system().d" -MT"src/system().d" -o "src/system().o" "../src/system().c"
+Finished building: ../src/system().c
+ 
+Building target: system()
+Invoking: GCC C Linker
+gcc  -o "system()"  ./src/system().o   
+/bin/sh: -c: line 0: syntax error near unexpected token `('
+/bin/sh: -c: line 0: `gcc  -o "system()"  ./src/system().o   '
+makefile:30: recipe for target 'system()' failed
+make: *** [system()] Error 1
+
+18:33:17 Build Finished (took 269ms)
+

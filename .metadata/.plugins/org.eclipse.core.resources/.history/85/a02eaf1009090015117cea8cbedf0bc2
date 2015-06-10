@@ -1,0 +1,10 @@
+int main(void)
+{
+int i = 5, j = 4;
+double f;
+f = (double)i / j;
+f = i / (double)j;
+f = (double)i / (double)j;
+f = (double)(i / j);
+return 0;
+}

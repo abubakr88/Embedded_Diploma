@@ -1,0 +1,20 @@
+/*
+ ============================================================================
+ Name        : revision.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include<stdio.h>
+#include<dos.h>
+
+
+int main() {
+	do {
+	printf("Input a positive integer: ");
+	scanf("%d",&n);
+	} while (n<=0);
+}

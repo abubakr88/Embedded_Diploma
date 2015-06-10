@@ -1,0 +1,11 @@
+23:06:14 **** Rebuild of configuration Debug for project timer ****
+Info: Internal Builder is used for build
+upcc -g -c -o src/timer.o ../src/timer.upc 
+Cannot run program "upcc": Unknown reason
+
+Error: Program "upcc" not found in PATH
+PATH=[/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/lib64/alliance/bin:/usr/libexec/sdcc:/home/abubakr/.local/bin:/home/abubakr/bin]
+
+
+23:06:14 Build Finished (took 55ms)
+

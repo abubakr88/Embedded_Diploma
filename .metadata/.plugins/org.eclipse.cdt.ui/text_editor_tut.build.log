@@ -1,0 +1,14 @@
+21:21:48 **** Incremental Build of configuration Debug for project text_editor_tut ****
+make all 
+Building file: ../src/text_editor_tut.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/text_editor_tut.d" -MT"src/text_editor_tut.d" -o "src/text_editor_tut.o" "../src/text_editor_tut.c"
+../src/text_editor_tut.c:13:20: fatal error: process.h: No such file or directory
+ #include<process.h>
+                    ^
+compilation terminated.
+src/subdir.mk:18: recipe for target 'src/text_editor_tut.o' failed
+make: *** [src/text_editor_tut.o] Error 1
+
+21:21:48 Build Finished (took 160ms)
+

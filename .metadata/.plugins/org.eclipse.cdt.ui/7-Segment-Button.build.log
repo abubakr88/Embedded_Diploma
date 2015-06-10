@@ -1,0 +1,12 @@
+01:19:58 **** Incremental Build of configuration Release for project 7-Segment-Button ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t 7-Segment-Button.elf
+   text	   data	    bss	    dec	    hex	filename
+    434	      0	      0	    434	    1b2	7-Segment-Button.elf
+    434	      0	      0	    434	    1b2	(TOTALS)
+Finished building: sizedummy
+ 
+
+01:19:58 Build Finished (took 60ms)
+

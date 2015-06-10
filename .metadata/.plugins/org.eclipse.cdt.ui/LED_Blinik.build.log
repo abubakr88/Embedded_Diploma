@@ -1,0 +1,11 @@
+14:16:41 **** Incremental Build of configuration Release for project LED_Blinik ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -mmcu -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atxmega32a4 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+subdir.mk:18: recipe for target 'main.o' failed
+avr-gcc: error: unrecognized command line option '-mmcu'
+make: *** [main.o] Error 1
+
+14:16:41 Build Finished (took 70ms)
+

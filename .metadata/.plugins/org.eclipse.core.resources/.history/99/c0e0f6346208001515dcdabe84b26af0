@@ -1,0 +1,10 @@
+   #include <stdio.h>
+   main()
+   {
+	   int a = sizeof(int);
+	   printf ("%d",a);
+       if (sizeof(int) > -1)
+           printf("True");
+       else
+           printf("False");
+   }

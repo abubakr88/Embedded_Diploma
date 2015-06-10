@@ -1,0 +1,12 @@
+23:35:00 **** Incremental Build of configuration Release for project timer_blink ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t timer_blink.elf
+   text	   data	    bss	    dec	    hex	filename
+    232	      0	      2	    234	     ea	timer_blink.elf
+    232	      0	      2	    234	     ea	(TOTALS)
+Finished building: sizedummy
+ 
+
+23:35:00 Build Finished (took 71ms)
+

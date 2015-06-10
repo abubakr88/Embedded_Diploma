@@ -1,0 +1,14 @@
+int main(void)
+{
+int i = '2';
+switch (i){
+case '1':
+	printf("Day 1\n");
+case '2':
+	printf("Day 2\n");
+case '3':
+	printf("Day 3\n");
+default:
+ 	printf("default\n");
+ }return 0;
+}

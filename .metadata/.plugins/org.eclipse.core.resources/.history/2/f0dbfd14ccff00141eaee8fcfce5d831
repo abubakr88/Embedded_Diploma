@@ -1,0 +1,22 @@
+/*
+ ============================================================================
+ Name        : revision.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include<stdio.h>
+
+int main() {
+int n;
+	do {
+	printf("Input a positive integer: ");
+	scanf("%d",&n);
+	} while (n<=0);
+	static float grade[3];
+	grade[0] = grade[2] + grade[50];
+	printf("%x",&grade);
+}

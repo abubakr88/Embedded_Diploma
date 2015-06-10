@@ -1,0 +1,19 @@
+/*
+ ============================================================================
+ Name        : text_editor2.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+// Fig. 11.2: fig11_02.c
+// Creating a sequential file
+#include <stdio.h>
+int main( void )
+{
+FILE *pfile =NULL;
+pfile = fopen("/home/abubakr/test.txt","w");
+return 0;
+} // end main

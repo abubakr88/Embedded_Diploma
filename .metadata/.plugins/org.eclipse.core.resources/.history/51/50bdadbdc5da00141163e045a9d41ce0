@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+	int a,n,x,y,z;
+	scanf("%d",&a);
+	z=1;
+	y=10;
+	while(y>0)
+	{
+    x=a%y;
+    x=x/z;
+    y*=10;
+    z*=10;
+	printf ("\n a=%d\n",x);
+	}
+
+}

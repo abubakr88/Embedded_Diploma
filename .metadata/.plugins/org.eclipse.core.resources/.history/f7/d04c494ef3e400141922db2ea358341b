@@ -1,0 +1,35 @@
+/*
+ ============================================================================
+ Name        : salary_struct.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    int gross;
+    int trans_all;
+    int medical_ins;
+    float tax;
+} salaryType;
+
+float getNet(salaryType);
+int main(void) {
+salaryType x={1000,200,100,0.15};
+float net ;
+net = getNet(x);
+printf("net=%f",net);
+}
+
+float getNet(salaryType x)
+{
+	int netSal=0;
+	netSal=((x.gross)+(x.trans_all)-(x.medical_ins))*(1-x.tax);
+	return netSal;
+
+}

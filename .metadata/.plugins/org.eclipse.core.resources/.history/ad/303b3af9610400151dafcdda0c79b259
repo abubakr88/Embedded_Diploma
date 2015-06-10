@@ -1,0 +1,18 @@
+/*
+ ============================================================================
+ Name        : test.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+    #include <stdio.h>
+    int main()
+    {
+        int i = 10;
+        void *p = &i;
+        printf("%f\n", *(float*)p);
+        return 0;
+    }

@@ -1,0 +1,7 @@
+    #include <stdio.h>
+    main()
+    {
+        char *p = "Sanfoundry C-Test";
+        *p = 'a';
+        printf("%s", p);
+    }

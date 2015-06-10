@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;system()&apos;" deleteContents="true" description="Delete resource &apos;system()&apos;" element1="/system()" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1428338019230"/>&#x0A;<refactoring comment="Delete resource &apos;Digits of an Integer&apos;" deleteContents="true" description="Delete resource &apos;Digits of an Integer&apos;" element1="/Digits of an Integer" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1428617554358"/>
+</session>

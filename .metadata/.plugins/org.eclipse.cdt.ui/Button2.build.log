@@ -1,0 +1,12 @@
+10:47:46 **** Incremental Build of configuration Release for project Button2 ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t Button2.elf
+   text	   data	    bss	    dec	    hex	filename
+    164	      0	      0	    164	     a4	Button2.elf
+    164	      0	      0	    164	     a4	(TOTALS)
+Finished building: sizedummy
+ 
+
+10:47:46 Build Finished (took 63ms)
+

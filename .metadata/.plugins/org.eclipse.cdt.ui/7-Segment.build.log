@@ -1,0 +1,12 @@
+15:26:50 **** Incremental Build of configuration Release for project 7-Segment ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t 7-Segment.elf
+   text	   data	    bss	    dec	    hex	filename
+    402	      0	      0	    402	    192	7-Segment.elf
+    402	      0	      0	    402	    192	(TOTALS)
+Finished building: sizedummy
+ 
+
+15:26:50 Build Finished (took 65ms)
+

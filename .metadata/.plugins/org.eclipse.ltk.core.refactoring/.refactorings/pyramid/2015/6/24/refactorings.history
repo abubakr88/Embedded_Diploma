@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pyramid/src/pyramid.c&apos; to &apos;twat.c&apos;" description="Rename resource &apos;pyramid.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/pyramid.c" name="twat.c" stamp="1433717444976" updateReferences="true"/>
+</session>

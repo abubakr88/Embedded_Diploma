@@ -1,0 +1,11 @@
+00:57:58 **** Incremental Build of configuration Debug for project abu ****
+make all 
+Building file: ../src/abu.c
+Invoking: Cross GCC Compiler
+testgcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/abu.d" -MT"src/abu.d" -o "src/abu.o" "../src/abu.c"
+/bin/sh: testgcc: command not found
+src/subdir.mk:18: recipe for target 'src/abu.o' failed
+make: *** [src/abu.o] Error 127
+
+00:57:58 Build Finished (took 62ms)
+

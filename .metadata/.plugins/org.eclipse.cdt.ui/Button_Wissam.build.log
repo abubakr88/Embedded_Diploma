@@ -1,0 +1,12 @@
+14:07:55 **** Incremental Build of configuration Release for project Button_Wissam ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t Button_Wissam.elf
+   text	   data	    bss	    dec	    hex	filename
+    128	      0	      0	    128	     80	Button_Wissam.elf
+    128	      0	      0	    128	     80	(TOTALS)
+Finished building: sizedummy
+ 
+
+14:07:55 Build Finished (took 62ms)
+

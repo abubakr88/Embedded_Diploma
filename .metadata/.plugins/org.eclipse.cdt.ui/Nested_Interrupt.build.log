@@ -1,0 +1,34 @@
+15:34:18 **** Incremental Build of configuration Release for project Nested_Interrupt ****
+make all 
+Building file: ../main_Nested_Interrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main_Nested_Interrupt.d" -MT"main_Nested_Interrupt.d" -c -o "main_Nested_Interrupt.o" "../main_Nested_Interrupt.c"
+Finished building: ../main_Nested_Interrupt.c
+ 
+Building target: Nested_Interrupt.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Nested_Interrupt.map -mmcu=atmega32 -o "Nested_Interrupt.elf"  ./main_Nested_Interrupt.o   
+Finished building target: Nested_Interrupt.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Nested_Interrupt.elf  >"Nested_Interrupt.lss"
+Finished building: Nested_Interrupt.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Nested_Interrupt.elf  "Nested_Interrupt.hex"
+Finished building: Nested_Interrupt.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Nested_Interrupt.elf  "Nested_Interrupt.eep"
+Finished building: Nested_Interrupt.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t Nested_Interrupt.elf
+   text	   data	    bss	    dec	    hex	filename
+    292	      0	      0	    292	    124	Nested_Interrupt.elf
+    292	      0	      0	    292	    124	(TOTALS)
+Finished building: sizedummy
+ 
+
+15:34:18 Build Finished (took 211ms)
+

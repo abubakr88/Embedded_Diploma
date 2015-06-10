@@ -1,0 +1,15 @@
+00:38:57 **** Incremental Build of configuration Debug for project twat ****
+make all 
+Building file: ../src/twat.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/twat.d" -MT"src/twat.d" -o "src/twat.o" "../src/twat.c"
+Finished building: ../src/twat.c
+ 
+Building target: twat
+Invoking: GCC C Linker
+gcc  -o "twat"  ./src/twat.o   
+Finished building target: twat
+ 
+
+00:38:57 Build Finished (took 115ms)
+

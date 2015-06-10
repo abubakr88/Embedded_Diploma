@@ -1,0 +1,20 @@
+/*
+ ============================================================================
+ Name        : revision.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+int main(void)
+{
+double f = 3.1416, g = 1.2e-5, h = 5000000000.0;
+printf("f=%lf g=%lf h=%lf\n", f, g, h);
+printf("f=%le g=%le h=%le\n", f, g, h);
+printf("f=%lg g=%lg h=%lg\n", f, g, h);
+printf("f=%7.2lf g=%.2le h=%.4lg\n", f, g, h);
+return 0;
+}

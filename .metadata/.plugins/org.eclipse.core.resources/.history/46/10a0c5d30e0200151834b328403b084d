@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: May 23, 2015
+ *      Author: abubakr
+ */
+
+
+#include "app.h"
+
+
+void main (void){
+
+	APP_Init();
+
+	while(1){
+		app();
+	}
+}

@@ -1,0 +1,273 @@
+00:58:10 **** Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+00:58:12 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+00:58:55 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+../src/cycle.c:27:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+src/subdir.mk:18: recipe for target 'src/cycle.o' failed
+make: *** [src/cycle.o] Error 1
+00:58:56 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+../src/cycle.c:27:1: error: expected identifier or ‘(’ before ‘}’ token
+src/subdir.mk:18: recipe for target 'src/cycle.o' failed
+ }
+ ^
+make: *** [src/cycle.o] Error 1
+00:59:07 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+00:59:08 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+00:59:45 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+00:59:46 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:06:12 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+../src/cycle.c: In function ‘main’:
+../src/cycle.c:14:13: warning: unused variable ‘rows’ [-Wunused-variable]
+Finished building: ../src/cycle.c
+     int i,j,rows;
+             ^
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:06:14 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:06:19 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:06:21 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:06:22 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:07:24 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:07:25 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:08:05 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:08:06 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:08:26 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:08:27 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:09:03 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:09:04 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:09:23 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:09:24 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:09:35 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:09:36 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:28:14 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:28:18 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:28:54 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:28:55 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:29:18 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:29:32 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:30:34 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+01:30:36 **** Incremental Build of configuration Release for project cycle ****
+make all 
+make: Nothing to be done for 'all'.
+01:31:01 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 

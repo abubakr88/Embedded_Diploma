@@ -1,0 +1,31 @@
+/*
+ * main.c
+ *
+ *  Created on: May 2, 2015
+ *      Author: abubakr
+ */
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+
+#define set_bit(reg, bitnumber) (reg |= (1 << bitnumber))
+#define clr_bit(reg, bitnumber) (reg &= ~(1 << bitnumber))
+#define get_bit(reg, bitnumber) (reg & (1 << bitnumber))
+
+int main ()
+{
+	clr_bit(DDRD, 0);
+	set_bit(DDRD, 5);
+	while(1)
+	{
+		if (get_bit(PIND, 0))
+		{
+			set_bit(PORTD, 5);
+		}
+		else
+		{
+			clr_bit(PORTD, 5);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+09:42:45 **** Incremental Build of configuration Release for project LCD ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t LCD.elf
+   text	   data	    bss	    dec	    hex	filename
+    450	     20	      0	    470	    1d6	LCD.elf
+    450	     20	      0	    470	    1d6	(TOTALS)
+Finished building: sizedummy
+ 
+
+09:42:45 Build Finished (took 62ms)
+

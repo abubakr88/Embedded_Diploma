@@ -1,0 +1,29 @@
+/*
+ ============================================================================
+ Name        : Sum_of_Natural_Numbers.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+int main()
+{
+	int a, n, i, sum=0;
+	    printf("Enter a number: ");
+	    scanf("%d",&n);
+	    if ( n<= 0)
+	          printf("Please Enter a Positive Number !!!!!");
+	      else
+	      {
+	    for (i=1;i<=n;i++)
+	    	{
+		    scanf("%d",&a);
+	    	sum = sum + a;
+	    	}
+	    printf("Sum = %d",sum);
+	      }
+	    return 0;
+}

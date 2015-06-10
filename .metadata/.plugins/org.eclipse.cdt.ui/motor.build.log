@@ -1,0 +1,12 @@
+02:07:18 **** Incremental Build of configuration Release for project motor ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t motor.elf
+   text	   data	    bss	    dec	    hex	filename
+    472	      0	      4	    476	    1dc	motor.elf
+    472	      0	      4	    476	    1dc	(TOTALS)
+Finished building: sizedummy
+ 
+
+02:07:18 Build Finished (took 61ms)
+

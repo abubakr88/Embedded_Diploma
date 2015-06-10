@@ -1,0 +1,36 @@
+13:30:53 **** Incremental Build of configuration Debug for project text_editor_project ****
+make all 
+Building file: ../src/text_editor_project.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/text_editor_project.d" -MT"src/text_editor_project.d" -o "src/text_editor_project.o" "../src/text_editor_project.c"
+../src/text_editor_project.c: In function ‘main’:
+../src/text_editor_project.c:28:16: warning: unused variable ‘z’ [-Wunused-variable]
+  int a,b,c,x,y,z;
+                ^
+../src/text_editor_project.c:28:14: warning: unused variable ‘y’ [-Wunused-variable]
+  int a,b,c,x,y,z;
+              ^
+../src/text_editor_project.c:28:12: warning: unused variable ‘x’ [-Wunused-variable]
+  int a,b,c,x,y,z;
+            ^
+../src/text_editor_project.c: In function ‘do_op’:
+../src/text_editor_project.c:59:3: warning: implicit declaration of function ‘find’ [-Wimplicit-function-declaration]
+   find(pfile , search_string);
+   ^
+../src/text_editor_project.c: At top level:
+../src/text_editor_project.c:81:6: warning: conflicting types for ‘find’
+ void find(FILE* pfile , char search_string[] ){
+      ^
+../src/text_editor_project.c:59:3: note: previous implicit declaration of ‘find’ was here
+   find(pfile , search_string);
+   ^
+Finished building: ../src/text_editor_project.c
+ 
+Building target: text_editor_project
+Invoking: GCC C Linker
+gcc  -o "text_editor_project"  ./src/text_editor_project.o   
+Finished building target: text_editor_project
+ 
+
+13:30:53 Build Finished (took 213ms)
+

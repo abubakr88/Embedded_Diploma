@@ -1,0 +1,21 @@
+13:40:35 **** Incremental Build of configuration Release for project Led_On ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atxmega32a4 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:13:5: error: 'DDRD' undeclared (first use in this function)
+     DDRD|=(1<<0);  // set port direction
+subdir.mk:18: recipe for target 'main.o' failed
+     ^
+../main.c:13:5: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:16:22: error: invalid operands to binary | (have 'PORT_t' and 'int')
+  PORTD|= (1<<0);  //
+                      ^
+../main.c:18:22: error: invalid operands to binary & (have 'PORT_t' and 'int')
+  PORTD&=~(1<<0);
+                      ^
+make: *** [main.o] Error 1
+
+13:40:35 Build Finished (took 112ms)
+

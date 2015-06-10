@@ -1,0 +1,11 @@
+00:55:59 **** Incremental Build of configuration Debug for project testq ****
+make all 
+Building file: ../src/testq.c
+Invoking: Cross GCC Compiler
+testgcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testq.d" -MT"src/testq.d" -o "src/testq.o" "../src/testq.c"
+/bin/sh: testgcc: command not found
+src/subdir.mk:18: recipe for target 'src/testq.o' failed
+make: *** [src/testq.o] Error 127
+
+00:55:59 Build Finished (took 59ms)
+

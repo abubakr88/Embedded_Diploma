@@ -1,0 +1,14 @@
+16:08:05 **** Incremental Build of configuration Release for project 7Segment_test ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=800000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c:12:18: fatal error: main.h: No such file or directory
+subdir.mk:18: recipe for target 'main.o' failed
+ #include <main.h>
+                  ^
+compilation terminated.
+make: *** [main.o] Error 1
+
+16:08:05 Build Finished (took 65ms)
+

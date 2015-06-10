@@ -1,0 +1,14 @@
+01:58:19 **** Incremental Build of configuration Release for project stack ****
+make all 
+Building file: ../src/stack.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/stack.d" -MT"src/stack.d" -o "src/stack.o" "../src/stack.c"
+../src/stack.c:13:23: fatal error: stackfunc.h: No such file or directory
+ #include <stackfunc.h>
+                       ^
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/stack.o' failed
+make: *** [src/stack.o] Error 1
+
+01:58:19 Build Finished (took 211ms)
+

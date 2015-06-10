@@ -1,0 +1,19 @@
+10:07:44 **** Incremental Build of configuration Debug for project temp ****
+make all 
+Building file: ../src/temp.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/temp.d" -MT"src/temp.d" -o "src/temp.o" "../src/temp.c"
+../src/temp.c: In function ‘main’:
+../src/temp.c:16:11: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘x’
+src/subdir.mk:18: recipe for target 'src/temp.o' failed
+  long u16 x;
+           ^
+../src/temp.c:16:11: error: ‘x’ undeclared (first use in this function)
+../src/temp.c:16:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/temp.c:17:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+make: *** [src/temp.o] Error 1
+
+10:07:44 Build Finished (took 116ms)
+

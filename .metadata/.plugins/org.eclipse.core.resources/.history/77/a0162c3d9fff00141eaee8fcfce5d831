@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : revision.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <math.h>
+int main(void)
+{
+	int r1, r2, x, y, hyp, i;
+		char grid [30][30];
+
+		printf("Enter the outer radius of your wheel?\n");
+		scanf("%d", &r1);
+		printf("Enter the inner radius of your wheel?\n");
+		scanf("%d", &r2);
+		i = (pow(x,2) + pow(y,2));
+		hyp = sqrt(i);
+
+		for(x = -30; x < 30; x++) {
+			for (y = -30; y < 30; y++) {
+				if(sqrt(pow(x,2) + pow(y,2)) > r1 * 2)
+					printf(" ");
+				else if(hyp < r1 * 2 && hyp > r2 * 2)
+					printf("$");
+				else if(hyp <= r2 * 2)
+				printf("*");
+		}
+		printf("\n");
+	}
+}

@@ -1,0 +1,11 @@
+21:37:28 **** Build of configuration Debug for project Rotate ****
+make all 
+Building file: ../src/Rotate.c
+Invoking: Cross GCC Compiler
+testgcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Rotate.d" -MT"src/Rotate.d" -o "src/Rotate.o" "../src/Rotate.c"
+/bin/sh: testgcc: command not found
+src/subdir.mk:18: recipe for target 'src/Rotate.o' failed
+make: *** [src/Rotate.o] Error 127
+
+21:37:28 Build Finished (took 61ms)
+

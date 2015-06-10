@@ -1,0 +1,15 @@
+01:31:01 **** Incremental Build of configuration Release for project cycle ****
+make all 
+Building file: ../src/cycle.c
+Invoking: GCC C Compiler
+gcc -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cycle.d" -MT"src/cycle.d" -o "src/cycle.o" "../src/cycle.c"
+Finished building: ../src/cycle.c
+ 
+Building target: cycle
+Invoking: GCC C Linker
+gcc  -o "cycle"  ./src/cycle.o   
+Finished building target: cycle
+ 
+
+01:31:01 Build Finished (took 164ms)
+

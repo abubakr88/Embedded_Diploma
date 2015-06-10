@@ -1,0 +1,46 @@
+13:30:49 **** Build of configuration Debug for project file_processing_editor ****
+make all 
+Building file: ../src/file_processing_editor.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file_processing_editor.d" -MT"src/file_processing_editor.d" -o "src/file_processing_editor.o" "../src/file_processing_editor.c"
+../src/file_processing_editor.c: In function ‘delete_str’:
+../src/file_processing_editor.c:65:2: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+  n = strlen(d);
+  ^
+../src/file_processing_editor.c:65:6: warning: incompatible implicit declaration of built-in function ‘strlen’
+  n = strlen(d);
+      ^
+../src/file_processing_editor.c:66:2: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if (index = get_index(d,phrase))
+  ^
+../src/file_processing_editor.c:70:4: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+    strcpy(&phrase[index], &phrase[index+n]);
+    ^
+../src/file_processing_editor.c:70:4: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../src/file_processing_editor.c: In function ‘insert_str’:
+../src/file_processing_editor.c:82:2: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int *’ [-Wformat=]
+  scanf("%s", &index);
+  ^
+../src/file_processing_editor.c:83:5: warning: incompatible implicit declaration of built-in function ‘strlen’
+  n= strlen(i);
+     ^
+../src/file_processing_editor.c:84:2: warning: incompatible implicit declaration of built-in function ‘strcpy’
+  strcpy(rest_str, &phrase[index]);
+  ^
+../src/file_processing_editor.c: In function ‘get_index’:
+../src/file_processing_editor.c:102:2: warning: implicit declaration of function ‘strstr’ [-Wimplicit-function-declaration]
+  char *found = strstr(phrase, d);
+  ^
+../src/file_processing_editor.c:102:16: warning: incompatible implicit declaration of built-in function ‘strstr’
+  char *found = strstr(phrase, d);
+                ^
+Finished building: ../src/file_processing_editor.c
+ 
+Building target: file_processing_editor
+Invoking: GCC C Linker
+gcc  -o "file_processing_editor"  ./src/file_processing_editor.o   
+Finished building target: file_processing_editor
+ 
+
+13:30:50 Build Finished (took 1s.135ms)
+

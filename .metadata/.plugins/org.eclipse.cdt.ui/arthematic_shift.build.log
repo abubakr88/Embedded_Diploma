@@ -1,0 +1,15 @@
+21:28:26 **** Build of configuration Debug for project arthematic_shift ****
+make all 
+Building file: ../src/arthematic_shift.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/arthematic_shift.d" -MT"src/arthematic_shift.d" -o "src/arthematic_shift.o" "../src/arthematic_shift.c"
+Finished building: ../src/arthematic_shift.c
+ 
+Building target: arthematic_shift
+Invoking: GCC C Linker
+gcc  -o "arthematic_shift"  ./src/arthematic_shift.o   
+Finished building target: arthematic_shift
+ 
+
+21:28:27 Build Finished (took 1s.318ms)
+

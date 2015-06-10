@@ -1,0 +1,6 @@
+13:30:52 **** Incremental Build of configuration Debug for project salary_struct ****
+make all 
+make: Nothing to be done for 'all'.
+
+13:30:52 Build Finished (took 63ms)
+

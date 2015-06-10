@@ -1,0 +1,15 @@
+15:39:45 **** Incremental Build of configuration Debug for project expon.2 ****
+make all 
+Building target: expon.2
+Invoking: GCC C Linker
+gcc  -o "expon.2"  ./src/expon.2.o   
+./src/expon.2.o: In function `main':
+/home/abubakr/workspace/expon.2/Debug/../src/expon.2.c:18: undefined reference to `exp'
+makefile:30: recipe for target 'expon.2' failed
+/home/abubakr/workspace/expon.2/Debug/../src/expon.2.c:19: undefined reference to `exp'
+/home/abubakr/workspace/expon.2/Debug/../src/expon.2.c:20: undefined reference to `exp'
+collect2: error: ld returned 1 exit status
+make: *** [expon.2] Error 1
+
+15:39:45 Build Finished (took 114ms)
+

@@ -1,0 +1,12 @@
+23:01:47 **** Incremental Build of configuration Release for project LED_blink_series ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t LED_blink_series.elf
+   text	   data	    bss	    dec	    hex	filename
+    204	      0	      0	    204	     cc	LED_blink_series.elf
+    204	      0	      0	    204	     cc	(TOTALS)
+Finished building: sizedummy
+ 
+
+23:01:47 Build Finished (took 59ms)
+

@@ -1,0 +1,36 @@
+/** @file    BUTTON.c
+ ** @brief   Button Module for this program
+ ** @author  Mohamed Tarek
+ ** @date    22/1/2014
+ ** @version 1.0
+ */
+
+#include "BUTTON.h"
+
+static DIO_Config g_Button_Config;
+
+/*******************************************************************************************************************/
+/*
+ * Description:
+ * Called by the Button_Init function (only) used to fill the Button configurations structure
+ */
+static void BUTTON_Configurations()
+{
+	g_Button_Config.port = BUTTON_PORT; //Button PORT
+	g_Button_Config.pin_num = BUTTON_PIN_NUM; //Button PIN Number
+	g_Button_Config.direction = INPUT; //Button is INPUT
+	g_Button_Config.value = RELEASED;
+}
+/*******************************************************************************************************************/
+void BUTTON_Init(void)
+{
+	BUTTON_Configurations();
+	DIO_Set_Direction(& g_Button_Config);
+}
+/*******************************************************************************************************************/
+uint8 BUTTON_Get_State(void)
+{
+	g_Button_Config.value = DIO_Read_Pin(& g_Button_Config);
+	return g_Button_Config.value;
+}
+/*******************************************************************************************************************/

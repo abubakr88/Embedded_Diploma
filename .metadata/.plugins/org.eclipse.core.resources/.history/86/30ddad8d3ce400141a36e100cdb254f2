@@ -1,0 +1,19 @@
+/*
+ ============================================================================
+ Name        : String_Array.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+char s[11];
+printf("Enter String ");
+scanf("%s",s);
+printf("\n%s",s);
+}

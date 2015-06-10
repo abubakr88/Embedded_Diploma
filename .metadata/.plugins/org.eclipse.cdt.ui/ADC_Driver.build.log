@@ -1,0 +1,50 @@
+11:48:09 **** Incremental Build of configuration Release for project ADC_Driver ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../lcd.h:13:0,
+                 from ../main.c:8:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+Finished building: ../main.c
+../main.c:11:7: warning: return type of 'main' is not 'int' [-Wmain]
+ 
+ uint8 main (void){
+Building target: ADC_Driver.elf
+       ^
+Invoking: AVR C Linker
+../main.c: In function 'main':
+../main.c:15:33: warning: pointer targets in passing argument 3 of 'LCD_Display_String_Row_Col' differ in signedness [-Wpointer-sign]
+  LCD_Display_String_Row_Col(0,3,"Temp=");
+                                 ^
+In file included from ../main.c:8:0:
+../lcd.h:25:6: note: expected 'const uint8 *' but argument is of type 'char *'
+avr-gcc -Wl,-Map,ADC_Driver.map -mmcu=atmega32 -o "ADC_Driver.elf"  ./ADC-Driver.o ./lcd.o ./main.o   
+ void LCD_Display_String_Row_Col(uint8 row,uint8 col, const uint8 *str);
+      ^
+Finished building target: ADC_Driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_Driver.elf  >"ADC_Driver.lss"
+Finished building: ADC_Driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_Driver.elf  "ADC_Driver.hex"
+Finished building: ADC_Driver.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex ADC_Driver.elf  "ADC_Driver.eep"
+Finished building: ADC_Driver.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t ADC_Driver.elf
+   text	   data	    bss	    dec	    hex	filename
+   1282	      6	      0	   1288	    508	ADC_Driver.elf
+   1282	      6	      0	   1288	    508	(TOTALS)
+Finished building: sizedummy
+ 
+
+11:48:09 Build Finished (took 112ms)
+

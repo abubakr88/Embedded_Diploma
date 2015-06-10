@@ -1,0 +1,12 @@
+13:57:57 **** Incremental Build of configuration Release for project Embedded_C_Project ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t Embedded_C_Project.elf
+   text	   data	    bss	    dec	    hex	filename
+    988	      0	     28	   1016	    3f8	Embedded_C_Project.elf
+    988	      0	     28	   1016	    3f8	(TOTALS)
+Finished building: sizedummy
+ 
+
+13:57:57 Build Finished (took 414ms)
+

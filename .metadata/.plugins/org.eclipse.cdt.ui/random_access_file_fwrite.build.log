@@ -1,0 +1,6 @@
+13:30:51 **** Incremental Build of configuration Debug for project random_access_file_fwrite ****
+make all 
+make: Nothing to be done for 'all'.
+
+13:30:51 Build Finished (took 66ms)
+

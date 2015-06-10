@@ -1,0 +1,34 @@
+/*
+ ============================================================================
+ Name        : stack.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct stack{
+	int top;
+	StackEntry entry [MAXSTACK];
+}Stack;
+
+int main(void) {
+Stack s;
+StackEntry e;
+
+CreateStack(&s); //for intializing the stack
+
+Push (e, &s);
+
+
+}
+
+void CreateStack (Stack *ps){
+	ps ->top=0;
+}
+
+void Push ()

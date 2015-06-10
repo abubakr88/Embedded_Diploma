@@ -1,0 +1,22 @@
+/*
+ * stackfunc.h
+ *
+ *  Created on: May 6, 2015
+ *      Author: abubakr
+ */
+
+#ifndef STACKFUNC_H_
+#define STACKFUNC_H_
+#define MAXSTACK 100
+
+typedef struct stack{
+	int top,x;
+	StackEntry entry [MAXSTACK];
+}Stack;
+
+void Push (StackEntry , Stack );
+void Pop (StackEntry *pe, Stack *ps);
+
+
+
+#endif /* STACKFUNC_H_ */

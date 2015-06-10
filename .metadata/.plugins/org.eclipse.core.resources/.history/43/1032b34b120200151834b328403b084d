@@ -1,0 +1,35 @@
+/*
+ * button.h
+ *
+ *  Created on: May 24, 2015
+ *      Author: abubakr
+ */
+
+#ifndef BUTTON_H_
+#define BUTTON_H_
+
+#include "DIO.h"
+
+/* Button State according to its configuration PULL UP/Down */
+
+#define BUTTON_PRESSED  LOGIC_HIGH
+#define BUTTON_RELEASED LOGIC_LOW
+
+/* Set the Button Port */
+#define BUTTON_PORT 'D'
+
+/* Set the Button Pin Number */
+#define BUTTON_PIN_NUM 0
+
+/*
+ * Description: 1. fill the button configurations structure
+ *              2. set the PIN direction which the button is connected to INPUT
+ */
+
+void Button_Init(void);
+
+/* Read the Button state Pressed/NOT Pressed */
+uint8 BUTTON_Get_State(void);
+
+
+#endif /* BUTTON_H_ */

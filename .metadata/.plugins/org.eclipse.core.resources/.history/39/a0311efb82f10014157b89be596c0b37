@@ -1,0 +1,110 @@
+#include <avr/io.h>
+#include <util/delay.h>
+
+#define set_bit(reg, bitnumber) (reg |= (1 << bitnumber))
+#define clr_bit(reg, bitnumber) (reg &= ~(1 << bitnumber))
+#define get_bit(reg, bitnumber) (reg & (1 << bitnumber))
+
+#define seven_seg(a) do {\
+	switch(a){\
+	case(0):\
+	clr_bit(PORTC, 4);\
+	clr_bit(PORTC, 5);\
+	clr_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(1):\
+	set_bit(PORTC, 4);\
+	clr_bit(PORTC, 5);\
+	clr_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(2):\
+	clr_bit(PORTC, 4);\
+	set_bit(PORTC, 5);\
+	clr_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(3):\
+	set_bit(PORTC, 4);\
+	set_bit(PORTC, 5);\
+	clr_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(4):\
+	clr_bit(PORTC, 4);\
+	clr_bit(PORTC, 5);\
+	set_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(5):\
+	set_bit(PORTC, 4);\
+	clr_bit(PORTC, 5);\
+	set_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(6):\
+	clr_bit(PORTC, 4);\
+	set_bit(PORTC, 5);\
+	set_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(7):\
+	set_bit(PORTC, 4);\
+	set_bit(PORTC, 5);\
+	set_bit(PORTC, 6);\
+	clr_bit(PORTC, 7);\
+	break;\
+	case(8):\
+	clr_bit(PORTC, 4);\
+	clr_bit(PORTC, 5);\
+	clr_bit(PORTC, 6);\
+	set_bit(PORTC, 7);\
+	break;\
+	case(9):\
+	set_bit(PORTC, 4);\
+	clr_bit(PORTC, 5);\
+	clr_bit(PORTC, 6);\
+	set_bit(PORTC, 7);\
+	break;\
+	}\
+	} while(0)
+
+// Pins 4 to 7 of Port C are connected to the BCD decoder (the chip under the displays) which is connected to both displays.
+// Pin 2 of Port C enables the first display (the on the right).
+// Pin 3 of Port C enables the second display (the on the left).
+
+int main()
+{
+	set_bit(DDRD, 4); // Sets the Data Direction Register bit of the Buzzer to 1 (output)
+	set_bit(DDRC, 2); // Sets the Data Direction Register bit of the first seven-segment display to 1.
+	set_bit(DDRC, 3); // Sets the Data Direction Register bit of the second seven-segment display to 1.
+	set_bit(DDRC, 4); // The following sets the four bits in the DDR of the BCD decoder (binary-coded decimal) to 1.
+	set_bit(DDRC, 5);
+	set_bit(DDRC, 6);
+	set_bit(DDRC, 7);
+	while(1)
+	{
+
+		set_bit(PORTC, 2); // Enables the first display
+		int a;
+		for (a = 0; a <= 9; a++)
+		{
+			seven_seg(9-a);
+			_delay_ms(1000);
+		}
+		clr_bit(PORTC, 2); // Stop the first display
+		set_bit(PORTC, 3); // Enable the second display
+		for (a = 0; a <= 9; a++)
+		{
+			seven_seg(a);
+			_delay_ms(1000);
+		}
+		clr_bit(PORTC, 3); // Stop the second display
+
+//		set_bit(PORTD, 4); // Start buzzer
+//		_delay_ms(1000);
+//		clr_bit(PORTD, 4); // Stop buzzer
+	}
+
+}

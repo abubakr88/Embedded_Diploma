@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : temp.c
+ Author      : abubakr
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef unsigned short int u16;
+int main(void) {
+	 u16 x;
+ }
