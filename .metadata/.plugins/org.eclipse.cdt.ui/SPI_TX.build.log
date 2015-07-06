@@ -1,0 +1,12 @@
+14:14:11 **** Incremental Build of configuration Release for project SPI_TX ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t SPI_TX.elf
+   text	   data	    bss	    dec	    hex	filename
+    282	      0	      0	    282	    11a	SPI_TX.elf
+    282	      0	      0	    282	    11a	(TOTALS)
+Finished building: sizedummy
+ 
+
+14:14:11 Build Finished (took 75ms)
+

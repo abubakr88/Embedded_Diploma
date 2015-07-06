@@ -1,0 +1,29 @@
+23:22:19 **** Incremental Build of configuration Release for project Project_Control_ECU ****
+make all 
+Building target: Project_Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_Control_ECU.map -mmcu=atmega32 -o "Project_Control_ECU.elf"  ./External_EEPROM.o ./I2C.o ./USART.o ./lcd.o ./main.o   
+Finished building target: Project_Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project_Control_ECU.elf  >"Project_Control_ECU.lss"
+Finished building: Project_Control_ECU.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Project_Control_ECU.elf  "Project_Control_ECU.hex"
+Finished building: Project_Control_ECU.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Project_Control_ECU.elf  "Project_Control_ECU.eep"
+Finished building: Project_Control_ECU.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t Project_Control_ECU.elf
+   text	   data	    bss	    dec	    hex	filename
+   1112	      0	      0	   1112	    458	Project_Control_ECU.elf
+   1112	      0	      0	   1112	    458	(TOTALS)
+Finished building: sizedummy
+ 
+
+23:22:19 Build Finished (took 114ms)
+

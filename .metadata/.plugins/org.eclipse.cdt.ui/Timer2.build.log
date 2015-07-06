@@ -1,4 +1,4 @@
-23:34:59 **** Build of configuration Release for project Timer2 ****
+18:26:32 **** Incremental Build of configuration Release for project Timer2 ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
@@ -25,10 +25,10 @@ Finished building: Timer2.eep
 Invoking: Print Size
 avr-size --format=berkeley -t Timer2.elf
    text	   data	    bss	    dec	    hex	filename
-    216	      0	      1	    217	     d9	Timer2.elf
-    216	      0	      1	    217	     d9	(TOTALS)
+    212	      0	      1	    213	     d5	Timer2.elf
+    212	      0	      1	    213	     d5	(TOTALS)
 Finished building: sizedummy
  
 
-23:34:59 Build Finished (took 116ms)
+18:26:32 Build Finished (took 162ms)
 

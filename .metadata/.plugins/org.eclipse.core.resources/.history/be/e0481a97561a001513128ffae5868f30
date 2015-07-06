@@ -1,0 +1,18 @@
+/*
+ * app.h
+ *
+ *  Created on: Jun 23, 2015
+ *      Author: abubakr
+ */
+
+#ifndef APP_H_
+#define APP_H_
+
+#include "lcd.h"
+#include "Keypad.h"
+#include "set_Passwd.h"
+#include "USART.h"
+
+void defaultScreen(void);
+
+#endif /* APP_H_ */

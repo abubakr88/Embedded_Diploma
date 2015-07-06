@@ -1,0 +1,59 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+// COntrol-ECU
+
+#include "main.h"
+#define FIRST_CHECK 0xbb
+
+int main (void){
+	uint8 a,option;
+
+	APP_Init();
+
+	EEPROM_Read_Byte(0x0311, &a);
+	while(UART_RecieveByte() != M2_READY){} // wait until MC1 is ready
+	UART_SendByte(a); // MC1 is ready
+
+	if (a != FIRST_CHECK)
+	{
+		savePassword();
+//		LCD_clearScreen();
+//		LCD_displayString(passwd);
+//		_delay_ms(1500);
+
+		UART_SendByte(M2_READY); // MC2 is ready
+		a=UART_RecieveByte();
+		EEPROM_Write_Byte(0x0311,a);
+
+	}
+while(1){
+
+	UART_SendByte(M2_READY); // MC2 is ready
+	option=UART_RecieveByte();
+
+	switch (option) {
+	case OPEN_DOOR :
+		openDoor();
+		break;
+
+	case AUTH :
+		authResponse();
+		break;
+
+	case SAVE_PASSWD :
+		savePassword();
+		break;
+
+	case ALERT:
+		alert();
+		break;
+
+	}
+}
+return (0);
+}

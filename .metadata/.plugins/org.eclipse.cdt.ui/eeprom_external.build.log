@@ -1,0 +1,12 @@
+04:19:26 **** Incremental Build of configuration Release for project eeprom_external ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t eeprom_external.elf
+   text	   data	    bss	    dec	    hex	filename
+   4948	      0	      0	   4948	   1354	eeprom_external.elf
+   4948	      0	      0	   4948	   1354	(TOTALS)
+Finished building: sizedummy
+ 
+
+04:19:26 Build Finished (took 80ms)
+

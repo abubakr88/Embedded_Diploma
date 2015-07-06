@@ -1,0 +1,17 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+
+#include "lcd.h"
+#include "Keypad.h"
+
+int main (void){
+	LCD_init();
+	LCD_displayStringRowColumn(0,0,"Challenge 1");
+	LCD_displayStringRowColumn(1,0,"Keypad 4*3");
+	return (0);
+}

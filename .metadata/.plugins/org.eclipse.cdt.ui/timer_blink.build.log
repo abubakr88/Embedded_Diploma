@@ -1,12 +1,13 @@
-23:35:00 **** Incremental Build of configuration Release for project timer_blink ****
+17:33:42 **** Incremental Build of configuration Release for project timer_blink ****
 make all 
-Invoking: Print Size
-avr-size --format=berkeley -t timer_blink.elf
-   text	   data	    bss	    dec	    hex	filename
-    232	      0	      2	    234	     ea	timer_blink.elf
-    232	      0	      2	    234	     ea	(TOTALS)
-Finished building: sizedummy
- 
+Building target: timer_blink.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,timer_blink.map -mmcu=atmega32 -o "timer_blink.elf"  ./main.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x2): undefined reference to `timer0_init'
+collect2: error: ld returned 1 exit status
+make: *** [timer_blink.elf] Error 1
+makefile:50: recipe for target 'timer_blink.elf' failed
 
-23:35:00 Build Finished (took 71ms)
+17:33:42 Build Finished (took 61ms)
 

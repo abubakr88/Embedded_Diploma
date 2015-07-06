@@ -1,0 +1,22 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+
+#include "lcd.h"
+#include "main.h"
+#include "Keypad.h"
+#include "set_Passwd.h"
+int main (void){
+
+	if (set_Passwd()){
+		set_Passwd();
+	}
+	LCD_clearScreen();
+	while(1){
+	}
+	return (0);
+}

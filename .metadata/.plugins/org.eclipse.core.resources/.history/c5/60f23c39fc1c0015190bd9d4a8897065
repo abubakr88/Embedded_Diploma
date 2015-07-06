@@ -1,0 +1,20 @@
+/*
+ * app.c
+ *
+ *  Created on: Jun 23, 2015
+ *      Author: abubakr
+ */
+
+
+void APP_Init(void)
+{
+}
+
+void app(void){
+
+}
+
+void defaultScreen(void){
+	LCD_displayStringRowColumn(0,0,"+ : Change Pass");
+	LCD_displayStringRowColumn(1,0,"- : Open Door");
+}

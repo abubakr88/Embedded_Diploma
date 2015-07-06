@@ -1,0 +1,39 @@
+09:43:08 **** Incremental Build of configuration Release for project UART_Driver ****
+make all 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.d" -c -o "uart.o" "../uart.c"
+In file included from ../uart.h:13:0,
+                 from ../uart.c:8:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+Finished building: ../uart.c
+ 
+Building target: UART_Driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART_Driver.map -mmcu=atmega32 -o "UART_Driver.elf"  ./main.o ./uart.o   
+Finished building target: UART_Driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART_Driver.elf  >"UART_Driver.lss"
+Finished building: UART_Driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex UART_Driver.elf  "UART_Driver.hex"
+Finished building: UART_Driver.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex UART_Driver.elf  "UART_Driver.eep"
+Finished building: UART_Driver.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t UART_Driver.elf
+   text	   data	    bss	    dec	    hex	filename
+    200	      0	      0	    200	     c8	UART_Driver.elf
+    200	      0	      0	    200	     c8	(TOTALS)
+Finished building: sizedummy
+ 
+
+09:43:09 Build Finished (took 614ms)
+

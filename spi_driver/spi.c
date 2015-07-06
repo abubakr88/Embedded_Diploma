@@ -1,0 +1,58 @@
+/*
+ * spi.c
+ *
+ *  Created on: Jun 13, 2015
+ *      Author: abubakr
+ */
+
+#include "spi.h"
+
+void SPI_Init_Master(void){
+	SPCR = (1 << SPIE )| (1 << MSTR );
+
+	SET_BIT(DDRB, 4 );
+	SET_BIT(DDRB, 5 );
+	SET_BIT(DDRB, 7 );
+	CLEAR_BIT(DDRB , 6 );
+}
+
+void SPI_Init_Slave(void){
+	SPCR = (1 << SPIE );
+	CLEAR_BIT(DDRB , 4);
+	CLEAR_BIT(DDRB , 5);
+	CLEAR_BIT(DDRB , 7);
+	SET_BIT(DDRB, 6 );
+
+}
+
+void SPI_SendByte(uint8 data){
+	SPDR = data;
+	while(BIT_IS_CLEAR(SPSR,SPIF)){}
+}
+
+uint8 SPI_RecieveByte(void){
+	while(BIT_IS_CLEAR(SPSR,SPIF)){}
+    return SPDR;
+}
+
+void SPI_sendString(const uint8 *Str)
+{
+	uint8 i = 0;
+	while(Str[i] != '\0')
+	{
+		SPI_SendByte(Str[i]);
+		i++;
+	}
+}
+
+void SPI_receiveString(uint8 *Str)
+{
+	uint8 i = 0;
+	Str[i] = SPI_RecieveByte();
+	while(Str[i] != '#')
+	{
+		i++;
+		Str[i] = SPI_RecieveByte();
+	}
+	Str[i] = '\0';
+}

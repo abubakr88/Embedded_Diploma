@@ -1,0 +1,12 @@
+03:01:40 **** Build of configuration Release for project FreeRTOS ****
+make all 
+Invoking: Print Size
+avr-size --format=berkeley -t FreeRTOS.elf
+   text	   data	    bss	    dec	    hex	filename
+   6864	     72	    167	   7103	   1bbf	FreeRTOS.elf
+   6864	     72	    167	   7103	   1bbf	(TOTALS)
+Finished building: sizedummy
+ 
+
+03:01:40 Build Finished (took 203ms)
+

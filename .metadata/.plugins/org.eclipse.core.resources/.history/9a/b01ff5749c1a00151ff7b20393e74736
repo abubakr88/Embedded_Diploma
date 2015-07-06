@@ -1,0 +1,26 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+#include "main.h"
+
+#define M2_READY 0x10
+
+int main (void){
+	uint8 * passwd;
+	UART_Init();
+	LCD_init();
+	UART_sendByte(M2_READY); // MC2 is ready
+	UART_ReceiveString(passwd);
+	LCD_displayString(passwd);
+
+
+
+while(1){
+
+}
+return (0);
+}

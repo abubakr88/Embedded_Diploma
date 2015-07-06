@@ -1,0 +1,16 @@
+23:57:09 **** Incremental Build of configuration Release for project Project_HMI_ECU ****
+make all 
+Building target: Project_HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project_HMI_ECU.map -mmcu=atmega32 -o "Project_HMI_ECU.elf"  ./DIO.o ./USART.o ./keypad.o ./lcd.o ./main.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x2e): undefined reference to `KeyPad_GetPressedKey'
+main.c:(.text.startup.main+0x3a): undefined reference to `KeyPad_GetPressedKey'
+main.c:(.text.startup.main+0x84): undefined reference to `KeyPad_GetPressedKey'
+main.c:(.text.startup.main+0x92): undefined reference to `KeyPad_GetPressedKey'
+collect2: error: ld returned 1 exit status
+make: *** [Project_HMI_ECU.elf] Error 1
+makefile:50: recipe for target 'Project_HMI_ECU.elf' failed
+
+23:57:09 Build Finished (took 63ms)
+

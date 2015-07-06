@@ -1,0 +1,109 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 26, 2015
+ *      Author: abubakr
+ */
+
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include "micro_config.h"
+#include "std_types.h"
+#include "common_macros.h"
+
+xSemaphoreHandle sem1;
+xSemaphoreHandle sem2;
+xSemaphoreHandle sem3;
+
+void led_blinking1(void * ptr){
+	uint8 ret=0;
+	SET_BIT(DDRA , PA0);
+	xSemaphoreTake(sem1,10); // set sem1 = 0
+	while(1){
+		ret = xSemaphoreTake(sem1,1000);
+		if (ret == 1){
+			SET_BIT(PORTA,PA0);
+		}
+		vTaskDelay(10);
+	}
+
+}
+
+void led_blinking2(void * ptr){
+	uint8 ret=0;
+	SET_BIT(DDRA , PA1);
+	xSemaphoreTake(sem2,10); // set sem1 = 0
+	while(1){
+		ret = xSemaphoreTake(sem2,1000);
+		if (ret == 1){
+			SET_BIT(PORTA,PA1);
+		}
+		vTaskDelay(10);
+	}
+
+}
+
+void led_blinking3(void * ptr){
+	uint8 ret=0;
+	SET_BIT(DDRA , PA2);
+	xSemaphoreTake(sem3,10); // set sem1 = 0
+	while(1){
+		ret = xSemaphoreTake(sem3,1000);
+		if (ret == 1){
+			SET_BIT(PORTA,PA2);
+		}
+		vTaskDelay(10);
+	}
+
+}
+
+void pb_scan1 (void * ptr){
+	CLEAR_BIT(DDRA , PA3);
+	while(1){
+	if (BIT_IS_SET(PINA, PA3)){
+		xSemaphoreGive(sem1);
+	}
+	vTaskDelay(100);
+  }
+}
+
+void pb_scan2 (void * ptr){
+	CLEAR_BIT(DDRA , PA4);
+	while(1){
+	if (BIT_IS_SET(PINA, PA4)){
+		xSemaphoreGive(sem2);
+		vTaskDelay(100);
+	}
+  }
+}
+
+
+void pb_scan3 (void * ptr){
+	CLEAR_BIT(DDRA , PA5);
+	while(1){
+	if (BIT_IS_SET(PINA, PA5)){
+		xSemaphoreGive(sem3);
+		vTaskDelay(100);
+	}
+  }
+}
+
+int main(void)
+{
+	vSemaphoreCreateBinary(sem1);
+	vSemaphoreCreateBinary(sem2);
+	vSemaphoreCreateBinary(sem3);
+
+	xTaskCreate(led_blinking1, "task_one", 60, NULL, 2, NULL);
+	xTaskCreate(led_blinking2, "task_two", 60, NULL, 2, NULL);
+	xTaskCreate(led_blinking3, "task_three", 60, NULL, 2, NULL);
+
+	xTaskCreate(pb_scan1, "task_four", 60, NULL, 3, NULL);
+	xTaskCreate(pb_scan2, "task_five", 60, NULL, 3, NULL);
+	xTaskCreate(pb_scan3, "task_sex", 60, NULL, 3, NULL);
+	vTaskStartScheduler();
+	return 0;
+}
+

@@ -1,13 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
+
+void foo()
+{
+    int a = 10;
+    static int sa = 10;
+
+    a += 5;
+    sa += 5;
+
+    printf("a = %d, sa = %d\n", a, sa);
+}
+
 
 int main()
 {
-    char c=48;
-    int i, mask=01;
-    for(i=1; i<=5; i++)
-    {
-        printf("%c", c|mask);
-        mask = mask<<1;
-    }
-    return 0;
+    int sa=0,i;
+
+    for (i = 0; i < 10; ++i)
+        foo();
+    printf("sa = %d ", sa);
+
 }

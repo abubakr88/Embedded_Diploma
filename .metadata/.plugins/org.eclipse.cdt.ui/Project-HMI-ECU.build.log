@@ -1,0 +1,58 @@
+00:13:52 **** Incremental Build of configuration Release for project Project-HMI-ECU ****
+make all 
+Building file: ../app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"app.d" -MT"app.d" -c -o "app.o" "../app.c"
+In file included from ../lcd.h:13:0,
+                 from ../app.h:11,
+                 from ../app.c:7:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+../app.c: In function 'authRequest':
+../app.c:50:18: warning: pointer targets in passing argument 1 of 'UART_SendString' differ in signedness [-Wpointer-sign]
+  UART_SendString(entredPasswd);
+                  ^
+In file included from ../app.h:14:0,
+                 from ../app.c:7:
+../USART.h:20:6: note: expected 'const char *' but argument is of type 'uint8 *'
+ void UART_SendString(const char *Str);
+      ^
+../app.c: In function 'changePassword':
+../app.c:92:19: warning: pointer targets in passing argument 1 of 'UART_SendString' differ in signedness [-Wpointer-sign]
+Finished building: ../app.c
+   UART_SendString(passwd);
+                   ^
+In file included from ../app.h:14:0,
+                 from ../app.c:7:
+../USART.h:20:6: note: expected 'const char *' but argument is of type 'uint8 *'
+ 
+Building target: Project-HMI-ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Project-HMI-ECU.map -mmcu=atmega32 -o "Project-HMI-ECU.elf"  ./DIO.o ./Keypad.o ./USART.o ./app.o ./lcd.o ./main.o ./set_Passwd.o ./timer.o   
+ void UART_SendString(const char *Str);
+      ^
+Finished building target: Project-HMI-ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Project-HMI-ECU.elf  >"Project-HMI-ECU.lss"
+Finished building: Project-HMI-ECU.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Project-HMI-ECU.elf  "Project-HMI-ECU.hex"
+Finished building: Project-HMI-ECU.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Project-HMI-ECU.elf  "Project-HMI-ECU.eep"
+Finished building: Project-HMI-ECU.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t Project-HMI-ECU.elf
+   text	   data	    bss	    dec	    hex	filename
+   2702	    134	      6	   2842	    b1a	Project-HMI-ECU.elf
+   2702	    134	      6	   2842	    b1a	(TOTALS)
+Finished building: sizedummy
+ 
+
+00:13:52 Build Finished (took 298ms)
+

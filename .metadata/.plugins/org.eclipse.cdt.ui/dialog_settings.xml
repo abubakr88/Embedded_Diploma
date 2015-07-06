@@ -3,8 +3,8 @@
 	<item value="Default C source template" key="LastUsedSourceTemplate"/>
 	<item value="Default C header template" key="LastUsedHeaderTemplate"/>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item value="142" key="size.height"/>
-		<item value="442" key="size.width"/>
+		<item value="118" key="size.height"/>
+		<item value="786" key="size.width"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
@@ -13,5 +13,7 @@
 	<section name="OptionalMessageDialog.hide.">
 	</section>
 	<section name="completion_proposal_size">
+		<item value="256" key="contextSelector.size.y"/>
+		<item value="286" key="contextSelector.size.x"/>
 	</section>
 </section>

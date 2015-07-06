@@ -1,0 +1,15 @@
+/*
+ * header.h
+ *
+ *  Created on: Jun 23, 2015
+ *      Author: abubakr
+ */
+
+#ifndef HEADER_H_
+#define HEADER_H_
+
+void APP_Init(void);
+
+void app(void);
+
+#endif /* HEADER_H_ */

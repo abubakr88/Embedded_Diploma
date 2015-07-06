@@ -1,0 +1,52 @@
+11:12:39 **** Incremental Build of configuration Release for project Led_Blinking_FreeRTOS ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c:27:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main (void){
+      ^
+../main.c: In function 'main':
+../main.c:28:33: warning: pointer targets in passing argument 2 of 'xTaskGenericCreate' differ in signedness [-Wpointer-sign]
+  xTaskCreate(task1,"task_one",60,NULL,3,NULL);  //pv pointer to void, 60 word
+Finished building: ../main.c
+                                 ^
+In file included from ../main.c:10:0:
+../task.h:1302:13: note: expected 'const signed char * const' but argument is of type 'char *'
+ signed portBASE_TYPE xTaskGenericCreate( pdTASK_CODE pxTaskCode, const signed char * const pcName, unsigned short usStackDepth, void *pvParameters, unsigned portBASE_TYPE uxPriority, xTaskHandle *pxCreatedTask, portSTACK_TYPE *puxStackBuffer, const xMemoryRegion * const xRegions ) PRIVILEGED_FUNCTION;
+             ^
+../main.c:29:33: warning: pointer targets in passing argument 2 of 'xTaskGenericCreate' differ in signedness [-Wpointer-sign]
+  xTaskCreate(task2,"task_two",60,NULL,2,NULL);
+                                 ^
+ 
+In file included from ../main.c:10:0:
+../task.h:1302:13: note: expected 'const signed char * const' but argument is of type 'char *'
+Building target: Led_Blinking_FreeRTOS.elf
+ signed portBASE_TYPE xTaskGenericCreate( pdTASK_CODE pxTaskCode, const signed char * const pcName, unsigned short usStackDepth, void *pvParameters, unsigned portBASE_TYPE uxPriority, xTaskHandle *pxCreatedTask, portSTACK_TYPE *puxStackBuffer, const xMemoryRegion * const xRegions ) PRIVILEGED_FUNCTION;
+Invoking: AVR C Linker
+             ^
+avr-gcc -Wl,-Map,Led_Blinking_FreeRTOS.map -mmcu=atmega32 -o "Led_Blinking_FreeRTOS.elf"  ./croutine.o ./heap_1.o ./lcd_4bit.o ./list.o ./main.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: Led_Blinking_FreeRTOS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Led_Blinking_FreeRTOS.elf  >"Led_Blinking_FreeRTOS.lss"
+Finished building: Led_Blinking_FreeRTOS.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Led_Blinking_FreeRTOS.elf  "Led_Blinking_FreeRTOS.hex"
+Finished building: Led_Blinking_FreeRTOS.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Led_Blinking_FreeRTOS.elf  "Led_Blinking_FreeRTOS.eep"
+Finished building: Led_Blinking_FreeRTOS.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t Led_Blinking_FreeRTOS.elf
+   text	   data	    bss	    dec	    hex	filename
+   6094	     26	    759	   6879	   1adf	Led_Blinking_FreeRTOS.elf
+   6094	     26	    759	   6879	   1adf	(TOTALS)
+Finished building: sizedummy
+ 
+
+11:12:40 Build Finished (took 110ms)
+

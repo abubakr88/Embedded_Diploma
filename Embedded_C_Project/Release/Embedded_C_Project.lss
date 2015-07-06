@@ -9,11 +9,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          0000001c  00800060  00800060  00000470  2**0
                   ALLOC
-  3 .stab         000008b8  00000000  00000000  00000470  2**2
+  3 .stab         00000888  00000000  00000000  00000470  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      000000f6  00000000  00000000  00000d28  2**0
+  4 .stabstr      000000e5  00000000  00000000  00000cf8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .comment      00000021  00000000  00000000  00000e1e  2**0
+  5 .comment      00000042  00000000  00000000  00000ddd  2**0
                   CONTENTS, READONLY
 
 Disassembly of section .text:
@@ -469,8 +469,6 @@ Disassembly of section .text:
 000003cc <__tablejump2__>:
  3cc:	ee 0f       	add	r30, r30
  3ce:	ff 1f       	adc	r31, r31
-
-000003d0 <__tablejump__>:
  3d0:	05 90       	lpm	r0, Z+
  3d2:	f4 91       	lpm	r31, Z
  3d4:	e0 2d       	mov	r30, r0

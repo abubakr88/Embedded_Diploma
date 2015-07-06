@@ -1,10 +1,10 @@
 Archive member included because of file (symbol)
 
-/usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
-                              /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o (exit)
-/usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+/usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o (exit)
+/usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
                               ./segment.o (__tablejump2__)
-/usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+/usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
                               ./button.o (__do_clear_bss)
 
 Memory Configuration
@@ -20,7 +20,7 @@ signature        0x0000000000840000 0x0000000000000400 rw !x
 
 Linker script and memory map
 
-LOAD /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+LOAD /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
 LOAD ./App_Seg.o
 LOAD ./DIO.o
 LOAD ./app.o
@@ -29,9 +29,9 @@ LOAD ./led.o
 LOAD ./main.o
 LOAD ./segment.o
 START GROUP
-LOAD /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a
-LOAD /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/libm.a
-LOAD /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/libc.a
 END GROUP
 
 .hash
@@ -126,7 +126,7 @@ END GROUP
 
 .text           0x0000000000000000      0x3dc
  *(.vectors)
- .vectors       0x0000000000000000       0x54 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .vectors       0x0000000000000000       0x54 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
                 0x0000000000000000                __vectors
                 0x0000000000000000                __vector_default
  *(.vectors)
@@ -154,18 +154,18 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000068        0x0 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .init0         0x0000000000000068        0x0 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
                 0x0000000000000068                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000000068        0xc /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .init2         0x0000000000000068        0xc /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000074       0x10 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+ .init4         0x0000000000000074       0x10 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
                 0x0000000000000074                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -177,10 +177,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000084        0x8 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .init9         0x0000000000000084        0x8 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
  *(.init9)
  *(.text)
- .text          0x000000000000008c        0x4 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .text          0x000000000000008c        0x4 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
                 0x000000000000008c                __vector_1
                 0x000000000000008c                __vector_12
                 0x000000000000008c                __bad_interrupt
@@ -209,9 +209,9 @@ END GROUP
  .text          0x0000000000000090        0x0 ./led.o
  .text          0x0000000000000090        0x0 ./main.o
  .text          0x0000000000000090        0x0 ./segment.o
- .text          0x0000000000000090        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
- .text          0x0000000000000090        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
- .text          0x0000000000000090        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000090        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000000090        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
+ .text          0x0000000000000090        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
                 0x0000000000000090                . = ALIGN (0x2)
  *(.text.*)
  .text.APP_Seg_nit
@@ -262,49 +262,48 @@ END GROUP
                 0x0000000000000316       0xb6 ./segment.o
                 0x0000000000000316                DISPLAY_SEG
  .text.libgcc.mul
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .text.libgcc.div
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.div
-                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
- .text.libgcc   0x00000000000003cc        0xc /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+                0x00000000000003cc        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
+ .text.libgcc   0x00000000000003cc        0xc /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
                 0x00000000000003cc                __tablejump2__
-                0x00000000000003d0                __tablejump__
  .text.libgcc.prologue
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.builtins
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.fmul
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.fixed
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.mul
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
                 0x00000000000003d8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+ .fini9         0x00000000000003d8        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
                 0x00000000000003d8                exit
                 0x00000000000003d8                _exit
  *(.fini9)
@@ -325,14 +324,14 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000003d8        0x4 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+ .fini0         0x00000000000003d8        0x4 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
  *(.fini0)
                 0x00000000000003dc                _etext = .
 
 .data           0x0000000000800060        0x0 load address 0x00000000000003dc
                 0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
- .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
  .data          0x0000000000800060        0x0 ./App_Seg.o
  .data          0x0000000000800060        0x0 ./DIO.o
  .data          0x0000000000800060        0x0 ./app.o
@@ -340,9 +339,9 @@ END GROUP
  .data          0x0000000000800060        0x0 ./led.o
  .data          0x0000000000800060        0x0 ./main.o
  .data          0x0000000000800060        0x0 ./segment.o
- .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
- .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
- .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
@@ -354,7 +353,7 @@ END GROUP
 .bss            0x0000000000800060       0x1c
                 0x0000000000800060                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
  .bss           0x0000000000800060        0x0 ./App_Seg.o
  .bss           0x0000000000800060        0x0 ./DIO.o
  .bss           0x0000000000800060        0x0 ./app.o
@@ -362,9 +361,9 @@ END GROUP
  .bss           0x0000000000800060        0x0 ./led.o
  .bss           0x0000000000800060        0x0 ./main.o
  .bss           0x0000000000800060        0x0 ./segment.o
- .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
- .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
- .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
+ .bss           0x0000000000800060        0x0 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
  *(.bss*)
  .bss.g_BUTTON_Config
                 0x0000000000800060        0x4 ./button.o
@@ -408,19 +407,19 @@ END GROUP
 .signature
  *(.signature*)
 
-.stab           0x0000000000000000      0x8b8
+.stab           0x0000000000000000      0x888
  *(.stab)
- .stab          0x0000000000000000      0x6cc /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
- .stab          0x00000000000006cc       0x6c /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_exit.o)
+ .stab          0x0000000000000000      0x6cc /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
+ .stab          0x00000000000006cc       0x6c /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_exit.o)
                                          0x78 (size before relaxing)
- .stab          0x0000000000000738       0xcc /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_tablejump.o)
-                                         0xd8 (size before relaxing)
- .stab          0x0000000000000804       0xb4 /usr/lib/gcc/avr/4.9.1/avr5/libgcc.a(_clear_bss.o)
+ .stab          0x0000000000000738       0x9c /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_tablejump2.o)
+                                         0xa8 (size before relaxing)
+ .stab          0x00000000000007d4       0xb4 /usr/lib/gcc/avr/4.9.2/avr5/libgcc.a(_clear_bss.o)
                                          0xc0 (size before relaxing)
 
-.stabstr        0x0000000000000000       0xf6
+.stabstr        0x0000000000000000       0xe5
  *(.stabstr)
- .stabstr       0x0000000000000000       0xf6 /usr/lib/gcc/avr/4.9.1/../../../../avr/lib/avr5/crtm32.o
+ .stabstr       0x0000000000000000       0xe5 /usr/lib/gcc/avr/4.9.2/../../../../avr/lib/avr5/crtm32.o
 
 .stab.excl
  *(.stab.excl)
@@ -434,13 +433,14 @@ END GROUP
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x0000000000000000       0x21
+.comment        0x0000000000000000       0x42
  *(.comment)
  .comment       0x0000000000000000       0x21 ./App_Seg.o
                                          0x22 (size before relaxing)
  .comment       0x0000000000000000       0x22 ./DIO.o
  .comment       0x0000000000000000       0x22 ./app.o
- .comment       0x0000000000000000       0x22 ./button.o
+ .comment       0x0000000000000021       0x21 ./button.o
+                                         0x22 (size before relaxing)
  .comment       0x0000000000000000       0x22 ./led.o
  .comment       0x0000000000000000       0x22 ./main.o
  .comment       0x0000000000000000       0x22 ./segment.o

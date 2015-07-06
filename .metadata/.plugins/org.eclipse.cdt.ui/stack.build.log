@@ -1,4 +1,4 @@
-01:58:19 **** Incremental Build of configuration Release for project stack ****
+10:26:54 **** Incremental Build of configuration Release for project stack ****
 make all 
 Building file: ../src/stack.c
 Invoking: GCC C Compiler
@@ -10,5 +10,5 @@ compilation terminated.
 src/subdir.mk:21: recipe for target 'src/stack.o' failed
 make: *** [src/stack.o] Error 1
 
-01:58:19 Build Finished (took 211ms)
+10:26:54 Build Finished (took 165ms)
 

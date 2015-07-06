@@ -1,0 +1,17 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+
+#include "lcd.h"
+#include "Keypad.h"
+
+int main (void){
+	LCD_init();
+	LCD_displayStringRowColumn(0,2,"Please Enter");
+	LCD_displayStringRowColumn(0,2,"New Password");
+	return (0);
+}

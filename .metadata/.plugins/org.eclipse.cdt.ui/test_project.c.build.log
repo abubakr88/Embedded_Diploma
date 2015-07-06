@@ -1,0 +1,6 @@
+16:30:28 **** Incremental Build of configuration Release for project test_project.c ****
+make all 
+make: Nothing to be done for 'all'.
+
+16:30:28 Build Finished (took 76ms)
+

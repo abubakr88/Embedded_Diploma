@@ -1,0 +1,14 @@
+/*
+ * main.h
+ *
+ *  Created on: Jun 21, 2015
+ *      Author: abubakr
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+#define N_PASSWD 16
+void defaultScreen(void);
+
+#endif /* MAIN_H_ */

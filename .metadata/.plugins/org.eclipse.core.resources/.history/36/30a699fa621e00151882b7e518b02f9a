@@ -1,0 +1,50 @@
+/*
+ * External_EEPROM_I2C.c
+ *
+ * Created: 3/12/2014 12:05:19 PM
+ *  Author: Mohamed Tarek
+ */
+ 
+
+#include"External_EEPROM.h"
+#include <util/delay.h>
+
+int main(void)
+{
+	unsigned char val = 0;
+	
+	DDRD  = 0xFF;
+	PORTD = 0x00;
+
+	// Init EEPROM
+	LCD_init();
+	EEPROM_Init();
+
+	while(1)
+	{
+
+		EEPROM_Write_Byte(0x0311, 0xf1); // Write 0x0F in the external EEPROM
+		_delay_ms(10);
+		EEPROM_Read_Byte(0x0311, &val); // Read 0x0F from the external EEPROM
+
+		LCD_clearScreen();
+		LCD_displayCharacter(val);
+
+		PORTD = val; // out the read value from the external EEPROM
+		_delay_ms(1000);
+
+		EEPROM_Write_Byte(0x0312, 0x0f); // Write 0x0F in the external EEPROM
+		_delay_ms(10);
+		EEPROM_Read_Byte(0x0312, &val); // Read 0x0F from the external EEPROM
+
+		LCD_clearScreen();
+		LCD_displayCharacter(val);
+
+
+		PORTD = val; // out the read value from the external EEPROM
+		_delay_ms(1000);
+
+
+	}
+	return 0;
+}

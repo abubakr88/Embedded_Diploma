@@ -1,0 +1,48 @@
+/*
+ * app.c
+ *
+ *  Created on: Jun 28, 2015
+ *      Author: abubakr
+ */
+
+
+#include "app.h"
+
+void APP_Init(void)
+{
+	UART_Init();
+	LCD_init();
+	EEPROM_Init();
+}
+
+
+uint8 authResponse(void){
+	uint8 password[SIZE], * savedPassword;
+
+
+	UART_SendByte(M2_READY); // MC2 is ready
+	UART_ReceiveString(password);
+
+
+	while(UART_RecieveByte() != M2_READY){} // wait until MC2 is ready
+	UART_SendByte(0x01);
+
+	return(0);
+}
+
+void alert(void){
+	_delay_ms(15000);
+}
+
+void openDoor(void){
+
+// (Rotate clock wise - Open the Door)
+
+	PORTC = PORTC & (~(1<<PC0));
+	PORTC = PORTC | (1<<PC1);
+	_delay_ms(5000);
+
+	PORTC = PORTC | (1<<PC0);
+	PORTC = PORTC & (~(1<<PC1));
+
+}

@@ -1,0 +1,99 @@
+/*
+ * LCD.c
+ *
+ * Created: 4/2/2014 7:42:46 PM
+ *  Author: mohamed tarek
+ */
+
+#include "LCD.h"
+
+void LCD_Init(void)
+{
+	LCD_DATA_PORT_DIR = 0xFF; // Configure the data port as output port 
+	LCD_CTRL_PORT_DIR |= (1<<E) | (1<<RS) | (1<<RW); //Configure the control pins(E,RS,RW) as output pins
+	
+	LCD_SendCommand(TWO_LINE_LCD_Eight_BIT_MODE); // use 2-line lcd + 8-bit Data Mode + 5*7 dot display Mode
+	
+	LCD_SendCommand(CURSOR_OFF); // cursor off
+	
+	LCD_SendCommand(CLEAR_COMMAND); // clear LCD at the beginning
+}
+
+void LCD_SendCommand(unsigned char command)
+{
+	LCD_DATA_PORT = command; // out the required command to the data bus D0 --> D7
+	_delay_us(1); //delay for processing
+	CLEAR_BIT(LCD_CTRL_PORT,RS); // Instruction Mode RS=0
+	CLEAR_BIT(LCD_CTRL_PORT,RW); // write command to LCD so RW=0
+	SET_BIT(LCD_CTRL_PORT,E); // Enable LCD E=1
+	_delay_us(1); //delay for processing	
+	CLEAR_BIT(LCD_CTRL_PORT,E); //disable LCD E=0
+}
+
+void LCD_DisplayCharacter(unsigned char data)
+{
+	LCD_DATA_PORT = data; // out the required data char to the data bus D0 --> D7
+	_delay_us(1); //delay for processing
+	SET_BIT(LCD_CTRL_PORT,RS); // Data Mode RS=1
+	CLEAR_BIT(LCD_CTRL_PORT,RW); // write data to LCD so RW=0
+	SET_BIT(LCD_CTRL_PORT,E); // Enable LCD E=1
+	_delay_us(1);
+	CLEAR_BIT(LCD_CTRL_PORT,E); //disable LCD E=0
+}
+
+void LCD_DisplayString(const char *Str)
+{
+	unsigned char i = 0;
+	while(Str[i] != '\0')
+	{
+		LCD_DisplayCharacter(Str[i]);
+		i++;
+	}
+}
+
+void LCD_GoTo_XY(unsigned char row,unsigned char col)
+{
+	unsigned char Address;
+	
+	/* first of all calculate the required address */
+	switch(row)
+	{
+		case 0:
+				Address=col;
+				break;
+		case 1:
+				Address=col+0x40;
+				break;
+		case 2:
+				Address=col+0x10;
+				break;
+		case 3:
+				Address=col+0x50;
+				break;
+	}					
+	/* to write to a specific address in the LCD 
+	 * we need to apply the corresponding command 0b10000000+Address */
+	LCD_SendCommand(Address | SET_CURSOR_LOCATION); 
+}
+
+void LCD_DisplayString_XY(unsigned char row,unsigned char col,const char *Str)
+{
+	LCD_GoTo_XY(row,col); // go ot to the required LCD position
+	
+	LCD_DisplayString(Str); //display the string
+}
+
+void LCD_IntgerToString(int data)
+{
+   char buff[16]; // String to hold the ascii result
+   itoa(data,buff,10); //10 for decimal 
+   LCD_DisplayString(buff);
+}
+
+void LCD_ClearScreen(void)
+{
+	LCD_SendCommand(CLEAR_COMMAND); //clear display 
+}	 
+
+
+

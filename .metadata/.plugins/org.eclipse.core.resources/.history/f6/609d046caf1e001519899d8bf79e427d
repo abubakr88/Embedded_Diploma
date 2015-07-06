@@ -1,0 +1,60 @@
+/*
+ * app.c
+ *
+ *  Created on: Jun 28, 2015
+ *      Author: abubakr
+ */
+
+
+#include "app.h"
+
+void APP_Init(void)
+{
+	UART_Init();
+	LCD_init();
+	EEPROM_Init();
+	SET_BIT(DDRC,ROTATE_CLOCK_WISE);
+	SET_BIT(DDRC,ROTATE_ANTI_CLOCK_WISE);
+
+}
+
+
+uint8 authResponse(void){
+	uint8 i,password[SIZE], * savedPassword;
+
+
+	UART_SendByte(M2_READY); // MC2 is ready
+	UART_ReceiveString(password);
+
+
+
+	while(UART_RecieveByte() != M2_READY){} // wait until MC2 is ready
+	UART_SendByte(0x01);
+
+	return(0);
+}
+
+void alert(void){
+	_delay_ms(15000);
+}
+
+void openDoor(void){
+
+// (Rotate clock wise - Open the Door)
+
+	CLEAR_BIT(PORTC,ROTATE_ANTI_CLOCK_WISE);
+	SET_BIT(PORTC,ROTATE_CLOCK_WISE);
+	_delay_ms(5000);
+
+// (Rotate anti-clock wise - Close the door)
+
+	SET_BIT(PORTC,ROTATE_ANTI_CLOCK_WISE);
+	CLEAR_BIT(PORTC,ROTATE_CLOCK_WISE);
+	_delay_ms(5000);
+
+// Stop MOTOR
+
+	CLEAR_BIT(PORTC,ROTATE_CLOCK_WISE);
+	CLEAR_BIT(PORTC,ROTATE_ANTI_CLOCK_WISE);
+
+}

@@ -1,0 +1,16 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+
+#include "lcd.h"
+#include "Keypad.h"
+
+int main (void){
+	LCD_init();
+	LCD_displayCharacter('0');
+	return (0);
+}

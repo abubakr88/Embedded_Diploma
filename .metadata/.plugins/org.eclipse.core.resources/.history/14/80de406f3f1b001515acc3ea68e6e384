@@ -1,0 +1,20 @@
+/*
+ * main.h
+ *
+ *  Created on: Jun 24, 2015
+ *      Author: abubakr
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+#include "USART.h"
+#include "std_types.h"
+#include "micro_config.h"
+#include "common_macros.h"
+#include "I2C.h"
+#include "External_EEPROM.h"
+#include "lcd.h"
+
+
+#endif /* MAIN_H_ */

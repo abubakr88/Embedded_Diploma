@@ -1,0 +1,36 @@
+/*
+ * app.c
+ *
+ *  Created on: Jun 23, 2015
+ *      Author: abubakr
+ */
+
+
+void APP_Init(void)
+{
+}
+
+void app(void){
+
+}
+
+void defaultScreen(void){
+	LCD_displayStringRowColumn(0,0,"+ : Change Pass");
+	LCD_displayStringRowColumn(1,0,"- : Open Door");
+}
+
+uint8 auth(void){
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Enter Your Passwd");
+	uint8 i=0,comp_Array=1,* re_Passwd;
+
+	return (0);
+}
+
+void changePassword(void){
+	if (auth()){
+	while (set_Passwd()){
+		set_Passwd();
+	}
+    }
+}

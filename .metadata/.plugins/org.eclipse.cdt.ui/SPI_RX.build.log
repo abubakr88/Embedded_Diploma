@@ -1,0 +1,39 @@
+14:14:11 **** Incremental Build of configuration Release for project SPI_RX ****
+make all 
+Building file: ../spi.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"spi.d" -MT"spi.d" -c -o "spi.o" "../spi.c"
+In file included from ../spi.h:13:0,
+                 from ../spi.c:8:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+Finished building: ../spi.c
+ 
+Building target: SPI_RX.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,SPI_RX.map -mmcu=atmega32 -o "SPI_RX.elf"  ./main.o ./spi.o   
+Finished building target: SPI_RX.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S SPI_RX.elf  >"SPI_RX.lss"
+Finished building: SPI_RX.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex SPI_RX.elf  "SPI_RX.hex"
+Finished building: SPI_RX.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex SPI_RX.elf  "SPI_RX.eep"
+Finished building: SPI_RX.eep
+ 
+Invoking: Print Size
+avr-size --format=berkeley -t SPI_RX.elf
+   text	   data	    bss	    dec	    hex	filename
+    282	      0	      0	    282	    11a	SPI_RX.elf
+    282	      0	      0	    282	    11a	(TOTALS)
+Finished building: sizedummy
+ 
+
+14:14:11 Build Finished (took 161ms)
+

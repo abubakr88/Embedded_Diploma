@@ -1,0 +1,62 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+
+#include "lcd.h"
+#include "main.h"
+#include "Keypad.h"
+
+int main (void){
+	uint8 i=0,col=0,comp_Array=1,passwd[N_PASSWD],re_Passwd[N_PASSWD];
+	LCD_init();
+
+	while(1){
+		LCD_displayStringRowColumn(0,0,"Enter New Passwd");
+
+		while (KeyPad_GetPressedKey() != 13)      // check the enter key.
+		{
+			passwd[i++]=KeyPad_GetPressedKey(); //get the pressed key number
+			LCD_displayStringRowColumn(1,col++,"*");
+			_delay_ms(500);
+		}
+
+		i=KeyPad_GetPressedKey();
+
+//		while (KeyPad_GetPressedKey() != 13)      // check the enter key.
+//		{
+//			re_Passwd[i++]=KeyPad_GetPressedKey(); //get the pressed key number
+//			LCD_displayStringRowColumn(1,col++,"*");
+//			_delay_ms(500);
+//		}
+//
+
+//		itoa(KeyPad_GetPressedKey(),passwd[i],10); /* 10 for decimal */
+//					if( (key >= 0) && (key <= 9) )
+//					{
+//						LCD_intgerToStringRowColumn(1,col,key);
+//					}
+//					else
+//					{
+//						LCD_displayCharacter(key); //display the pressed keypad switch
+//					}
+
+//		for (i=0;i<N_PASSWD;i++)
+//		{
+//			if(passwd[i] != re_Passwd[i])
+//			{
+//			comp_Array=0;
+//			break;
+//			}
+//		}
+//		if(comp_Array)
+//		{
+//		LCD_clearScreen();
+//		}
+
+	return (0);
+	}
+}

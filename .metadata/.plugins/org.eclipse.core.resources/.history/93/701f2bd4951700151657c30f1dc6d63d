@@ -1,0 +1,38 @@
+/*
+ * LCD.h
+ *
+ * Created: 4/2/2014 7:46:00 PM
+ *  Author: mohamed tarek
+ */ 
+
+#ifndef LCD_H_
+#define LCD_H_
+
+#include <avr/io.h>
+#include "Common_Macros.h"
+#include <util/delay.h>
+
+#define RS PD4
+#define RW PD5
+#define E  PD6
+#define LCD_CTRL_PORT PORTD
+#define LCD_CTRL_PORT_DIR DDRD
+#define LCD_DATA_PORT PORTC
+#define LCD_DATA_PORT_DIR DDRC
+
+#define CLEAR_COMMAND 0x01
+#define TWO_LINE_LCD_Eight_BIT_MODE 0x38
+#define CURSOR_OFF 0x0C
+#define CURSOR_ON 0x0E
+#define SET_CURSOR_LOCATION 0x80 
+
+void LCD_SendCommand(unsigned char command);
+void LCD_DisplayCharacter(unsigned char data);
+void LCD_DisplayString(const char *Str);
+void LCD_Init(void);
+void LCD_ClearScreen(void);
+void LCD_GoTo_XY(unsigned char row,unsigned char col);
+void LCD_DisplayString_XY(unsigned char row,unsigned char col,const char *Str);
+void LCD_IntgerToString(int data);
+
+#endif /* LCD_H_ */

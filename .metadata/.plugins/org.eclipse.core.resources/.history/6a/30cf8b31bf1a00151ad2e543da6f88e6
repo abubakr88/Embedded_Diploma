@@ -1,0 +1,66 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 20, 2015
+ *      Author: abubakr
+ */
+
+
+#include "main.h"
+#include "app.h"
+
+#define M2_READY 0x10
+
+uint8 * passwd;
+
+int main (void){
+	UART_init(); // initialize UART
+//	while(UART_recieveByte() != M2_READY){} // wait until MC2 is ready
+//	UART_sendString("I am Micro1#"); // send the required string to MC2
+//
+    while(1)
+    {
+
+    }
+
+
+//	uint8 * returnPasswd;
+//	passwd=(uint8 *) malloc(15);
+//	UART_Init();
+//
+//	while (set_Passwd()){
+//		set_Passwd();
+//	}
+//
+//	while(UART_RecieveByte() != M2_READY){} // wait until MC2 is ready
+//	UART_SendString("google#");
+//
+//	defaultScreen();
+//
+//	if(KeyPad_GetPressedKey()== '+'){
+//		while (set_Passwd()){
+//			set_Passwd();
+//		}
+//	}
+//	if(KeyPad_GetPressedKey()== '-'){
+//		LCD_clearScreen();
+//		LCD_displayStringRowColumn(0,0,"Enter Passwd");
+//		returnPasswd = enter_Passwd();
+//
+//
+////		LCD_clearScreen();
+////		LCD_displayString(returnPasswd);
+////		_delay_ms(1500);
+//
+//	}
+//
+////
+////	LCD_clearScreen();
+////	LCD_displayString(passwd);
+////	_delay_ms(1500);
+//
+//	while(1){
+//
+//	}
+	return (0);
+}

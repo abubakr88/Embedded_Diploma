@@ -1,4 +1,4 @@
-13:57:57 **** Incremental Build of configuration Release for project Embedded_C_Project ****
+18:20:07 **** Incremental Build of configuration Release for project Embedded_C_Project ****
 make all 
 Invoking: Print Size
 avr-size --format=berkeley -t Embedded_C_Project.elf
@@ -8,5 +8,5 @@ avr-size --format=berkeley -t Embedded_C_Project.elf
 Finished building: sizedummy
  
 
-13:57:57 Build Finished (took 414ms)
+18:20:07 Build Finished (took 60ms)
 

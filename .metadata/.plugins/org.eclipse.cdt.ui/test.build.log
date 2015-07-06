@@ -1,6 +1,6 @@
-02:06:28 **** Incremental Build of configuration Release for project test ****
+17:40:46 **** Incremental Build of configuration Release for project test ****
 make all 
 make: Nothing to be done for 'all'.
 
-02:06:28 Build Finished (took 62ms)
+17:40:46 Build Finished (took 69ms)
 
