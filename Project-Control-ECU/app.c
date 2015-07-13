@@ -15,7 +15,6 @@
 void APP_Init(void)
 {
 	UART_Init();
-	LCD_init();
 	EEPROM_Init();
 	SET_BIT(DDRC,ROTATE_CLOCK_WISE);
 	SET_BIT(DDRC,ROTATE_ANTI_CLOCK_WISE);

@@ -1,23 +1,13 @@
 #include <stdio.h>
+#include <math.h>
 
-void foo()
-{
-    int a = 10;
-    static int sa = 10;
-
-    a += 5;
-    sa += 5;
-
-    printf("a = %d, sa = %d\n", a, sa);
+int main() {
+	unsigned int line,i,r=5,j;
+for (i=0;i<=r;i++){
+	line=sqrt((r*r)-((r-i)*(r-i)));
+for (j=0; j<line ; j++){
+	printf (" ");
 }
-
-
-int main()
-{
-    int sa=0,i;
-
-    for (i = 0; i < 10; ++i)
-        foo();
-    printf("sa = %d ", sa);
-
+printf ("*\n");
+}
 }

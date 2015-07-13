@@ -1,6 +1,13 @@
-17:43:57 **** Incremental Build of configuration Release for project test1 ****
+23:33:30 **** Incremental Build of configuration Release for project test1 ****
 make all 
-make: Nothing to be done for 'all'.
+Building target: test1
+Invoking: GCC C Linker
+gcc  -o "test1"  ./src/test1.o   
+./src/test1.o: In function `main':
+test1.c:(.text.startup+0x91): undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'test1' failed
+make: *** [test1] Error 1
 
-17:43:57 Build Finished (took 63ms)
+23:33:30 Build Finished (took 109ms)
 

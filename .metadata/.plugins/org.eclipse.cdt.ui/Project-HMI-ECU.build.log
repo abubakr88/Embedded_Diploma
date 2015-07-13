@@ -1,5 +1,15 @@
-00:13:52 **** Incremental Build of configuration Release for project Project-HMI-ECU ****
+23:47:12 **** Build of configuration Release for project Project-HMI-ECU ****
 make all 
+Building file: ../Keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"Keypad.d" -MT"Keypad.d" -c -o "Keypad.o" "../Keypad.c"
+Finished building: ../Keypad.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"USART.d" -MT"USART.d" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
 Building file: ../app.c
 Invoking: AVR Compiler
 avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"app.d" -MT"app.d" -c -o "app.o" "../app.c"
@@ -7,11 +17,13 @@ In file included from ../lcd.h:13:0,
                  from ../app.h:11,
                  from ../app.c:7:
 ../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+Finished building: ../app.c
  /** @file    App.c
  ^
 ../app.c: In function 'authRequest':
 ../app.c:50:18: warning: pointer targets in passing argument 1 of 'UART_SendString' differ in signedness [-Wpointer-sign]
   UART_SendString(entredPasswd);
+ 
                   ^
 In file included from ../app.h:14:0,
                  from ../app.c:7:
@@ -20,18 +32,109 @@ In file included from ../app.h:14:0,
       ^
 ../app.c: In function 'changePassword':
 ../app.c:92:19: warning: pointer targets in passing argument 1 of 'UART_SendString' differ in signedness [-Wpointer-sign]
-Finished building: ../app.c
+Building file: ../lcd.c
    UART_SendString(passwd);
                    ^
 In file included from ../app.h:14:0,
                  from ../app.c:7:
 ../USART.h:20:6: note: expected 'const char *' but argument is of type 'uint8 *'
+Invoking: AVR Compiler
+ void UART_SendString(const char *Str);
+      ^
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.d" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.h:13:0,
+                 from ../lcd.c:8:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:100:4: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+    itoa(data,buff,10); /* 10 for decimal */
+    ^
+../lcd.c: In function 'LCD_goToRowColumn':
+../lcd.c:87:2: warning: 'Address' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  LCD_sendCommand(Address | SET_CURSOR_LOCATION); 
+  ^
+Finished building: ../lcd.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+In file included from ../lcd.h:13:0,
+                 from ../app.h:11,
+                 from ../main.c:11:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+../main.c: In function 'main':
+../main.c:19:2: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+Finished building: ../main.c
+  passwd=(uint8 *) malloc(15);
+  ^
+../main.c:19:19: warning: incompatible implicit declaration of built-in function 'malloc'
+  passwd=(uint8 *) malloc(15);
+                   ^
+../main.c:25:2: warning: implicit declaration of function 'APP_Init' [-Wimplicit-function-declaration]
+ 
+Building file: ../set_Passwd.c
+  APP_Init();
+  ^
+../main.c:49:19: warning: pointer targets in passing argument 1 of 'UART_SendString' differ in signedness [-Wpointer-sign]
+Invoking: AVR Compiler
+   UART_SendString(passwd);
+                   ^
+In file included from ../app.h:14:0,
+                 from ../main.c:11:
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"set_Passwd.d" -MT"set_Passwd.d" -c -o "set_Passwd.o" "../set_Passwd.c"
+../USART.h:20:6: note: expected 'const char *' but argument is of type 'uint8 *'
+ void UART_SendString(const char *Str);
+      ^
+../main.c:81:4: warning: implicit declaration of function 'openDoor' [-Wimplicit-function-declaration]
+    openDoor();
+    ^
+../main.c:18:20: warning: unused variable 'returnPasswd' [-Wunused-variable]
+  uint8 a= PASSWORD_IS_SET , * returnPasswd;
+                    ^
+In file included from ../set_Passwd.h:13:0,
+                 from ../set_Passwd.c:9:
+../micro_config.h:2:1: warning: "/*" within comment [-Wcomment]
+ /** @file    App.c
+ ^
+../set_Passwd.c: In function 'set_Passwd':
+../set_Passwd.c:39:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (!strcmp(passwd,re_Passwd)){
+               ^
+In file included from ../set_Passwd.h:16:0,
+                 from ../set_Passwd.c:9:
+/usr/avr/include/string.h:125:12: note: expected 'const char *' but argument is of type 'uint8 *'
+ extern int strcmp(const char *, const char *) __ATTR_PURE__;
+            ^
+../set_Passwd.c:39:22: warning: pointer targets in passing argument 2 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (!strcmp(passwd,re_Passwd)){
+                      ^
+In file included from ../set_Passwd.h:16:0,
+                 from ../set_Passwd.c:9:
+/usr/avr/include/string.h:125:12: note: expected 'const char *' but argument is of type 'uint8 *'
+ extern int strcmp(const char *, const char *) __ATTR_PURE__;
+            ^
+../set_Passwd.c:17:12: warning: unused variable 'comp_Array' [-Wunused-variable]
+Finished building: ../set_Passwd.c
+  uint8 i=0,comp_Array=1,* re_Passwd;
+            ^
+../set_Passwd.c:17:8: warning: unused variable 'i' [-Wunused-variable]
+  uint8 i=0,comp_Array=1,* re_Passwd;
+        ^
+../set_Passwd.c: In function 'enter_Passwd':
+../set_Passwd.c:63:2: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  password = (uint8 *) malloc(15);
+  ^
+../set_Passwd.c:63:23: warning: incompatible implicit declaration of built-in function 'malloc'
+  password = (uint8 *) malloc(15);
+                       ^
  
 Building target: Project-HMI-ECU.elf
 Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Project-HMI-ECU.map -mmcu=atmega32 -o "Project-HMI-ECU.elf"  ./DIO.o ./Keypad.o ./USART.o ./app.o ./lcd.o ./main.o ./set_Passwd.o ./timer.o   
- void UART_SendString(const char *Str);
-      ^
+avr-gcc -Wl,-Map,Project-HMI-ECU.map -mmcu=atmega32 -o "Project-HMI-ECU.elf"  ./Keypad.o ./USART.o ./app.o ./lcd.o ./main.o ./set_Passwd.o   
 Finished building target: Project-HMI-ECU.elf
  
 Invoking: AVR Create Extended Listing
@@ -49,10 +152,10 @@ Finished building: Project-HMI-ECU.eep
 Invoking: Print Size
 avr-size --format=berkeley -t Project-HMI-ECU.elf
    text	   data	    bss	    dec	    hex	filename
-   2702	    134	      6	   2842	    b1a	Project-HMI-ECU.elf
-   2702	    134	      6	   2842	    b1a	(TOTALS)
+   2430	    134	      6	   2570	    a0a	Project-HMI-ECU.elf
+   2430	    134	      6	   2570	    a0a	(TOTALS)
 Finished building: sizedummy
  
 
-00:13:52 Build Finished (took 298ms)
+23:47:13 Build Finished (took 913ms)
 

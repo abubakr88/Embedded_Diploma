@@ -15,7 +15,6 @@
 #include "common_macros.h"
 #include "I2C.h"
 #include "External_EEPROM.h"
-#include "lcd.h"
 
 #define M2_READY 0x10
 #define SIZE 16

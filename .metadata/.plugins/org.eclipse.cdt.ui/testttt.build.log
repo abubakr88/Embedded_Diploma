@@ -1,6 +1,19 @@
-16:54:24 **** Build of configuration Debug for project testttt ****
+23:36:03 **** Incremental Build of configuration Debug for project testttt ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/testttt.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testttt.d" -MT"src/testttt.d" -o "src/testttt.o" "../src/testttt.c"
+../src/testttt.c: In function ‘main’:
+../src/testttt.c:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+Finished building: ../src/testttt.c
+ ^
+ 
+Building target: testttt
+Invoking: GCC C Linker
+gcc  -o "testttt"  ./src/testttt.o   
+Finished building target: testttt
+ 
 
-16:54:24 Build Finished (took 100ms)
+23:36:03 Build Finished (took 164ms)
 

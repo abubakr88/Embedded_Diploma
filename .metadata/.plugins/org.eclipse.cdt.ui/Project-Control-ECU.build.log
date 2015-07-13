@@ -1,12 +1,12 @@
-00:13:52 **** Incremental Build of configuration Release for project Project-Control-ECU ****
+23:51:05 **** Incremental Build of configuration Release for project Project-Control-ECU ****
 make all 
 Invoking: Print Size
 avr-size --format=berkeley -t Project-Control-ECU.elf
    text	   data	    bss	    dec	    hex	filename
-   1910	      0	      0	   1910	    776	Project-Control-ECU.elf
-   1910	      0	      0	   1910	    776	(TOTALS)
+   1106	      0	      0	   1106	    452	Project-Control-ECU.elf
+   1106	      0	      0	   1106	    452	(TOTALS)
 Finished building: sizedummy
  
 
-00:13:52 Build Finished (took 74ms)
+23:51:05 Build Finished (took 61ms)
 
